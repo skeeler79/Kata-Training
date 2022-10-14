@@ -1,4 +1,4 @@
-// You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+// // You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
 function getMiddle(s) {
     let middle;
@@ -13,7 +13,7 @@ function getMiddle(s) {
 
 getMiddle("test")
 
-// The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+// // The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
 
 function century(year) {
 
@@ -40,3 +40,45 @@ function findNeedle(haystack) {
         }
     }
 }
+
+
+//Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+// For example, if we run 9119 through the function, 811181 will come out, because 9 squared is 81 and 1 squared is 1.
+
+// Note: The function accepts an integer and returns an integer
+
+//first, convert num into string and split the number into individual ints
+//second, create array
+//third, loop through array and square nums
+//finally, concactonate the squared ints and convert into an int
+
+function squareDigits(num) {
+    //convert parameter into string and split
+    let numString = num.toString();
+    // numString.split('');
+
+    //create an array from the split string
+    let numArr = Array.from(numString);
+
+    //square each number in the array and create a new array
+    let squaredArr = []
+    for (let i = 0; i < numArr.length; i++) {
+        let squaredNum = Math.pow(numArr[i], 2);
+        squaredArr.push(squaredNum);
+    }
+
+
+    //convert squaredArr back to string and loop through squared array, concoctanate and change back into an int
+
+    let squaredString = squaredArr.toString()
+    return Number(squaredString.split(',').join(''))
+
+}
+
+
+//examples:
+console.log(squareDigits(24), '416')
+console.log(squareDigits(456), '162536')
+console.log(squareDigits(3112), '9114')
+
