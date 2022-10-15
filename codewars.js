@@ -82,3 +82,31 @@ console.log(squareDigits(24), '416')
 console.log(squareDigits(456), '162536')
 console.log(squareDigits(3112), '9114')
 
+
+
+// Given a list of integers, determine whether the sum of its elements is odd or even.
+
+// Give your answer as a string matching "odd" or "even".
+
+// If the input array is empty consider it as: [0] (array with a zero).
+
+function oddOrEven(array) {
+    //take in an array of ints
+    //add ints together
+    let sum = array.reduce(function (prevVal, currentVal) {
+        return prevVal + currentVal;
+    }, 0); //0 is the initialValue, so if the array is empty, it will initialize at 0;
+
+//determine if sum is odd or even
+    if (sum % 2 == 0) {
+        return "even";
+    } else
+        return "odd";
+    
+    //if array is empty, consider it 0/even
+}
+
+console.log(oddOrEven([0, 1, 4]), "odd")
+console.log(oddOrEven([0]), "even")
+console.log(oddOrEven([0, -1, -5]), "even")
+console.log(oddOrEven([]), "even")
