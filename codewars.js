@@ -151,3 +151,35 @@ function triArea(base, height) {
     return area;
 
 }
+
+
+
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+function XO(str) {
+    //create two new arrays, convert str into an arr
+    let x = [];
+    let o = [];
+    strArr = str.toLowerCase().split('');
+    //first, loop through the string and search for x's and o's and push into arrays
+    for (let i = 0; i < strArr.length; i++) {
+        if (strArr[i] === 'x') {
+            x.push(i);
+        } else if (strArr[i] === 'o') {
+            o.push(i);
+        }
+    }
+    //compare arrays and return boolean
+    if (x.length == o.length) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+XO("ooxx")
+// XO("xooxx") => false
+// XO("ooxXm") => true
+XO("zpzpzpp")
+// => true // when no 'x' and 'o' is present should return true
+XO("zzoo") 
