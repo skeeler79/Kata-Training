@@ -183,3 +183,32 @@ XO("ooxx")
 XO("zpzpzpp")
 // => true // when no 'x' and 'o' is present should return true
 XO("zzoo") 
+
+
+
+
+// Given an integral number, determine if it's a square number, return true or false:
+
+function isSquare(n) {
+    return Number.isInteger(Math.sqrt(n));
+    //return statement automatically returns a boolean 
+    
+    //original code:
+    //let sqrt = Math.sqrt(n);
+    //if (Number.isInteger(sqrt) === true){
+        //return true
+    // }else{
+    //     return false
+    // }
+    //refactored:
+    // if (Number.isInteger(Math.sqrt(n))){
+    //   return true;
+    // }else {
+    //   return false;
+    // }
+    //further refactored to final code
+}
+
+console.log(isSquare(4), true);
+console.log(isSquare(2), true);
+console.log(isSquare(1), false);
