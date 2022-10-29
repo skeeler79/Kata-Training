@@ -212,3 +212,19 @@ function isSquare(n) {
 console.log(isSquare(4), true);
 console.log(isSquare(2), true);
 console.log(isSquare(1), false);
+
+
+
+// Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+function minMax(arr) {
+    let newArr = [];
+    let sorted = arr.sort(function (a, b) { return a - b });
+    let min = sorted[0];
+    let max = sorted[sorted.length - 1];
+    newArr.push(min);
+    newArr.push(max);
+    return newArr;
+}
+
+
+console.log(minMax([44, 3, 101, 5, 10]))
