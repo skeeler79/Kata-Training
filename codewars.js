@@ -228,3 +228,12 @@ function minMax(arr) {
 
 
 console.log(minMax([44, 3, 101, 5, 10]))
+
+//can be refactored to:
+function minMax(arr) {
+    let newArr = [];
+    newArr.push(Math.min(...arr));
+    newArr.push(Math.max(...arr));
+    return newArr;
+
+}
