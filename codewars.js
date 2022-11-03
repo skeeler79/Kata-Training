@@ -237,3 +237,18 @@ function minMax(arr) {
     return newArr;
 
 }
+
+function FirstReverse(str) {
+    //separate string into an array, reverse, and join
+
+
+    return str.split('').reverse().join('');
+
+}
+
+console.log(FirstReverse("Hello World!"))
+
+//P - takes in a string
+//R - returns the reverse of the string
+//E- Hello --> olleH
+//
