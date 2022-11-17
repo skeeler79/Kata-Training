@@ -272,3 +272,33 @@ function descendingOrder(n) {
 
 
 console.log(descendingOrder(42145), 54421)
+
+
+
+
+// Have the function LongestWord(sen) take the sen parameter being passed and 
+// return the longest word in the string. If there are two or more words that 
+// are the same length, return the first word from the string with that length. 
+// Ignore punctuation and assume sen will not be empty. Words may also contain 
+// numbers, for example "Hello world123 567"
+
+function LongestWord(sen) {
+    //remove punctuation and split the sentence
+    //loop through the array
+    //compare the length of each word and save to variable
+    let splitSen = sen.replace(/[^\w\s\']|_/g, "").split(' ');
+    let longestWord = '';
+    for (let i = 0; i < splitSen.length; i++) {
+        if (splitSen[i].length > longestWord.length) {
+
+            longestWord = splitSen[i];
+        }
+    }
+
+    // code goes here  
+    return longestWord;
+
+}
+
+// keep this function call here 
+console.log(LongestWord("The quick red*&^%((())) fox"));
