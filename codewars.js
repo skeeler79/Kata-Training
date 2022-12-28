@@ -389,3 +389,35 @@ p1.compareAge(p2)
 p2.compareAge(p1)
 p1.compareAge(p3)
 
+
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+// Example: (Input --> Output)
+
+// "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+
+// isIsogram "Dermatoglyphics" = true
+// isIsogram "moose" = false
+// isIsogram "aba" = false
+
+
+function isIsogram(input) {
+    //create an array from the string
+    //loop through the array
+    //create a conditional to compare if the iterator is included in the array more than once
+    if (input.length === 0) {
+        return true;
+    }
+    let newArr = input.toLowerCase().split('').sort();
+    let sortedArr = []
+    for (let i = 0; i < newArr.length; i++) {
+        if (sortedArr.includes(newArr[i])) {
+            return false
+        } else {
+            sortedArr.push(newArr[i])
+        } if (sortedArr.length == newArr.length) {
+            return true;
+        }
+    }
+}
+
